@@ -1,0 +1,19 @@
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: var(--font-header);
+}
+
+p {
+  margin: 2rem;
+}

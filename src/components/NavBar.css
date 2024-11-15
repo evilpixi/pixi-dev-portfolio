@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  width: 100vw;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+  color: var(--color-text);
+  font-weight: bold;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: large;
+}
+
+.switches {
+  display: flex;
+  gap: 1rem;
+}

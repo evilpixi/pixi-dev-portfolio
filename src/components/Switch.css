@@ -1,0 +1,101 @@
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch-label {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-right: 0.1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slider:before {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.2s;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+input:checked+.slider {
+  background-color: #399cee;
+}
+
+input:checked+.slider:before {
+  transform: translateX(18px);
+}
+
+
+/* --- Light and Dark Mode --- */
+.switch-dark {
+  --color-darkmoon: #4a2fa8;
+}
+
+.slider.switch-light:before {
+  background-color: rgb(246, 246, 209);
+  box-shadow: 0 0 7px 2px yellow;
+  border: solid 2px yellow;
+}
+
+input:checked+.slider.switch-light {
+  background-color: #166daf;
+}
+
+.slider.switch-dark:before {
+  background-color: var(--color-darkmoon);
+  box-shadow: inset 1px -3px #ffffff, inset 2px 1px #ffffff, inset 2px -3px white, inset 4px -1px white;
+  border: solid 1px var(--color-darkmoon);
+  border-radius: 50%;
+}
+
+.slider.switch-dark {
+  background: radial-gradient(circle at 33% 90%, var(--color-darkmoon) 60%, rgb(43, 32, 126) 70%);
+}
+
+/* --- Language mode --- */
+.slider.switch-en {
+  --color-us-blue: rgb(47, 46, 100);
+  --color-us-red: rgb(172, 35, 51);
+  background-color: red;
+  background:
+    linear-gradient(to bottom, var(--color-us-blue), var(--color-us-red)) no-repeat -25px center,
+    url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') no-repeat 15px center;
+  background-size: cover;
+}
+
+.slider.switch-en:before {
+  box-shadow: 2px -2px 3px 1px var(--color-us-blue), 2px 2px 3px 1px var(--color-us-red);
+
+}
+
+input:checked+.slider.switch-es {
+  background-color: #399cee;
+  background:
+    linear-gradient(to right, transparent 30%, rgb(64, 160, 234) 80%),
+    linear-gradient(to right, rgb(64, 160, 234), rgb(64, 160, 234)) no-repeat 30px center,
+    url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg') repeat-x -10px center;
+  background-size: cover;
+}
