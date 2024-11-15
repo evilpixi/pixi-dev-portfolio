@@ -7,7 +7,7 @@ import AboutMePage from '@pages/AboutMePage';
 import ResumePage from '@pages/ResumePage';
 
 import Navbar from '@components/Navbar';
-import Footer from '@components/Footer';
+//import Footer from '@components/Footer';
 import { useState, useEffect } from 'react';
 import { Language } from '@/types/language';
 import '@assets/App.css';
