@@ -11,12 +11,14 @@
   --color-background: #f0f0f0;
   --color-text: #222;
   --color-primary: purple;
+  --color-secondary-background: #ddd;
 
   --color-accent-text: #f0f0f0;
 }
 
 [data-theme="dark"] {
   --color-background: #222;
+  --color-secondary-background: #444;
   --color-text: #f0f0f0;
 }
 
